@@ -1,0 +1,244 @@
+// Файл обнуляющих стилей
+@import "_nullstyle";
+
+// $maxWidth: 1280;
+// @mixin adaptiv-font($pcSize, $mobSize) {
+// 	$addSize: $pcSize - $mobSize;
+// 	$maxWidth: $maxWidth - 320;
+// 	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+// }
+
+// Переменные для блока
+.container {
+	max-width: 944px;
+	margin: 0 auto;
+}
+.menu {
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	justify-content: space-between;
+	padding: 32px 0;
+	border-bottom: 1px solid #828282;
+	&__nav {
+		font-size: 18px;
+		line-height: 22px;
+		color: #828282;
+		&:nth-child(1) {
+			color: #070707;
+			font-weight: 600;
+		}
+	}
+}
+.name {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(110px, 145px));
+	justify-content: space-between;
+	align-items: end;
+	padding: 0 0 50px 0;
+	grid-column-gap: 10px;
+
+	&__info {
+		font-size: 18px;
+		line-height: 22px;
+
+		color: #070707;
+		&:nth-child(1) {
+			font-size: 47.3392px;
+			line-height: 59px;
+			color: #070707;
+			font-weight: 600;
+		}
+		&:nth-child(3) {
+			justify-self: end;
+		}
+	}
+
+	&__lang {
+		writing-mode: vertical-lr;
+		text-align: center;
+		transform: rotate(180deg);
+		font-weight: 600;
+		a {
+			color: inherit;
+			&:nth-child(1) {
+				color: #828282;
+			}
+		}
+	}
+}
+.img1 {
+	padding: 0 0 96px 0;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.img2 {
+}
+.about {
+	padding: 118px 0 109px 0;
+	text-align: center;
+	color: #070707;
+	&__title {
+		font-size: 34px;
+		line-height: 42px;
+		padding: 0 0 19px 0;
+		font-weight: 700;
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 22px;
+		font-weight: 600;
+
+		p {
+			padding: 0 0 50px 0;
+			margin: 0 auto;
+			max-width: 475px;
+			&:nth-child(2) {
+				max-width: 380px;
+			}
+			&:last-child {
+				padding: 0;
+				max-width: 330px;
+			}
+		}
+	}
+}
+.skills {
+	text-align: center;
+	padding: 100px 0;
+	&__title {
+		font-size: 34px;
+		line-height: 42px;
+		font-weight: 700;
+		padding: 0 0 70px 0;
+	}
+
+	&__text {
+		font-size: 20px;
+		line-height: 22px;
+		padding: 0 0 83px 0;
+	}
+
+	&__prog {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(150px, 206px));
+		justify-content: space-between;
+
+		@media screen and (max-width: 760px) {
+			grid-template-columns: repeat(2, minmax(150px, 206px));
+			grid-template-rows: repeat(2, 1fr);
+			justify-content: space-around;
+			align-content: space-around;
+			grid-row-gap: 30px;
+		}
+	}
+
+	&__row {
+		display: grid;
+		grid-template-rows: 88px 40% 26px;
+		align-content: space-between;
+		align-items: start;
+	}
+
+	&__icon {
+		position: relative;
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__p {
+		padding: 30px 0;
+	}
+
+	&__star {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: cover;
+	}
+}
+.portfolio {
+	padding: 100px 0;
+	text-align: center;
+	&__title {
+		font-size: 34px;
+		line-height: 42px;
+		font-weight: 700;
+		padding: 0 0 50px 0;
+	}
+
+	&__cont {
+		display: grid;
+		grid-template-rows: auto minmax(100px, 1fr) auto minmax(100px, 1fr) auto minmax(100px, 1fr);
+	}
+
+	&__img {
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 22px;
+		font-weight: 500;
+		padding: 5% 0 11% 0;
+	}
+}
+.contacts {
+	text-align: center;
+	&__title {
+		font-size: 34px;
+		line-height: 42px;
+		font-weight: 700;
+		padding: 0 0 20px 0;
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 22px;
+		font-weight: 500;
+	}
+
+	&__btn {
+		margin: 30px 0 60px;
+		button {
+			font-size: 18px;
+			font-weight: 600;
+			padding: 12px 30px;
+			color: white;
+			background-color: black;
+			border-radius: 20px;
+		}
+	}
+
+	&__icon {
+		display: grid;
+		grid-template-columns: repeat(4, auto);
+		justify-content: space-between;
+		max-width: 340px;
+		margin: 0 auto;
+		padding: 0 0 45px 0;
+		&_1 {
+			img {
+				max-width: 100%;
+				max-height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	&__end {
+		font-size: 14px;
+		line-height: 25px;
+		padding: 0 0 120px 0;
+		color: #828282;
+	}
+}
